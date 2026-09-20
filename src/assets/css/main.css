@@ -1,38 +1,82 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'Inter Variable';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 100 900;
-    src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@5.3.0/latin-wght-normal.woff2) format(woff2) tech(variations);
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@5.3.0/latin-wght-normal.woff2)
+    format(woff2) tech(variations);
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-    --default-font-family: "Inter Variable", sans-serif;
-    --color-primary-bg: #f9f9fb;
+  --default-font-family: "Inter Variable", sans-serif;
+  --color-primary-bg: #f9f9fb;
 }
 
 @theme {
-    --color-primary-bg: var(--color-primary-bg);
+  --color-primary-bg: var(--color-primary-bg); 
+
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(240 10% 3.9%);
+  --color-card: hsl(60 8% 97%);
+  --color-card-foreground: hsl(240 10% 3.9%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(240 10% 3.9%);
+  --color-primary: hsl(216.25 100% 58.46%);
+  --color-primary-foreground: hsl(355.7 100% 97.3%);
+  --color-secondary: hsl(240 4.8% 95.9%);
+  --color-secondary-foreground: hsl(240 5.9% 10%);
+  --color-muted: hsl(40 6% 91%);
+  --color-muted-foreground: hsl(240 3.8% 46.1%);
+  --color-accent: hsl(240 4.8% 95.9%);
+  --color-accent-foreground: hsl(240 5.9% 10%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+  --color-code: hsl(24 9.8% 10%);
+  --color-border: hsl(240 5.9% 90%);
+  --color-input: hsl(240 5.9% 90%);
+  --color-ring: hsl(216.25 100% 58.46%);
 }
 
 @layer base {
-    body {
-        background-color: #1d1d21;
-        color: white;
-    }
+  body {
+    background-color: #1d1d21;
+    color: white;
+  }
 
-    :not(.dark) body {
-        background-color: #f9f9fb;
-        color: #1d1d21;
-    }
+  :not(.dark) body {
+    background-color: #f9f9fb;
+    color: #1d1d21;
+  }
 }
 
 .dark {
-    background-color: #1d1d21;
-    color: white;
+  background-color: #1d1d21;
+  color: white;
+  --color-background: hsl(141 17% 5%);
+  --color-foreground: hsl(0 0% 95%);
+  --color-card: hsl(24 9.8% 10%);
+  --color-card-foreground: hsl(0 0% 95%);
+  --color-popover: hsl(0 0% 9%);
+  --color-popover-foreground: hsl(0 0% 95%);
+  --color-primary: hsl(216.25 100% 58.46%);
+  --color-primary-foreground: hsl(144.9 80.4% 10%);
+  --color-secondary: hsl(240 3.7% 15.9%);
+  --color-secondary-foreground: hsl(0 0% 98%);
+  --color-muted: hsl(0 0% 15%);
+  --color-muted-foreground: hsl(168 2.6% 62.9%);
+  --color-accent: hsl(12 6.5% 15.1%);
+  --color-accent-foreground: hsl(0 0% 98%);
+  --color-destructive: hsl(0 62.8% 30.6%);
+  --color-destructive-foreground: hsl(0 85.7% 97.3%);
+  --color-code: hsl(0 0% 95%);
+  --color-border: hsl(240 3.7% 15.9%);
+  --color-input: hsl(240 3.7% 15.9%);
+  --color-ring: hsl(225.35 84.07% 48.99%);
 }
