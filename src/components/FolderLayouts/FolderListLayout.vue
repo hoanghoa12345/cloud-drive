@@ -73,17 +73,4 @@ const { t } = useI18n()
 
 const emit = defineEmits(['view-change'])
 const token = useRoute().query.token || ''
-
-const addFolder = () => {
-  const newId = items.value.length + 1
-  const folderName = `New Folder ${newId}`
-  items.value.push({
-    id: newId,
-    name: folderName,
-    itemCount: 0,
-    lastModified: 'Just now',
-    size: '0 KB',
-    type: 'Folder'
-  })
-}
 </script>

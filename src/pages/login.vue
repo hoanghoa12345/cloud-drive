@@ -12,8 +12,8 @@
         <div>
           <Menu as="div" class="relative inline-block text-left">
             <MenuButton
-              class="inline-flex w-full items-center justify-center gap-x-2 rounded-xl px-4 py-2 text-sm font-medium text-zinc-700 hover:ring-1 ring-zinc-200 dark:ring-neutral-700 hover:bg-zinc-50 dark:hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-500">
-              <i class="ti ti-world text-lg text-zinc-400 dark:text-slate-100"></i>
+              class="inline-flex w-full items-center justify-center gap-x-2 rounded-xl px-4 py-2 text-sm font-medium text-zinc-700 dark:ring-neutral-700 hover:bg-zinc-50 dark:hover:bg-neutral-800">
+              <i class="ti ti-world text-lg text-black dark:text-slate-100"></i>
               <i class="ti ti-chevron-down size-4 text-zinc-400 dark:text-slate-100"></i>
             </MenuButton>
 
@@ -44,7 +44,7 @@
     <div
       class="mt-16 mb-16 flex h-full w-full items-center justify-center px-2 md:mx-0 md:px-12 lg:mb-10 lg:items-center lg:justify-start">
       <button type="button" :disabled="loading"
-        class="w-full max-w-sm text-white bg-blue-500 box-border border border-transparent hover:bg-blue-500-strong focus:ring-4 focus:ring-blue-500-medium shadow-xs font-medium leading-5 rounded-xl text-sm px-4 py-2.5 focus:outline-none disabled:bg-blue-400 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+        class="w-full max-w-sm text-white bg-blue-500 box-border border border-transparent hover:bg-blue-500-strong focus:ring-4 focus:ring-blue-500-medium shadow-xs font-medium leading-5 rounded-md text-sm px-4 py-2.5 focus:outline-none disabled:bg-blue-400 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         @click="handleOAuth2Login">
         <span v-if="loading" class="space-x-2 animate-spin"><i class="ti ti-loader"></i></span>
         <span v-else class="space-x-2">{{ t("continue_with_oauth") }}</span>

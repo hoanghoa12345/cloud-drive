@@ -3,7 +3,7 @@
       <NuxtLink
         v-for="item in items" 
         :key="item.id"
-        class="hover:shadow-lg hover:bg-elevated transition-all duration-300 px-4 py-6 cursor-pointer group bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+        class="hover:shadow-lg hover:bg-elevated transition-all duration-300 px-4 py-6 cursor-pointer group bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 rounded-sm"
         :to="`/folders/${item.name}?token=${token}`"
       >
         <div class="flex flex-col items-center text-center">
@@ -45,15 +45,4 @@ const props = defineProps({
 })
 
 const token = useRoute().query.token || ''
-
-const addFolder = () => {
-  const newId = items.value.length + 1
-  const folderName = `New Folder ${newId}`
-  items.value.push({
-    id: newId,
-    name: folderName,
-    itemCount: 0,
-    lastModified: 'Just now'
-  })
-}
 </script>
